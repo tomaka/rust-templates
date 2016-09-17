@@ -14,7 +14,7 @@ pub fn analyze(prefix: &str, elements: &[template::Element]) -> String {
     let mut codegen = String::new();
     for element in elements.iter() {
         match element {
-            &template::Element::Template(ref s) => {
+            &template::Element::Static(ref s) => {
                 codegen.push_str(&format!("out.push_str(r##\"{}\"##);", s));      // TODO: should Rust-escape `s` maybe?
             },
             &template::Element::RustExpr(ref expr) => {
