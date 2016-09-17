@@ -1,9 +1,7 @@
 use std::collections::HashMap;
 use std::collections::hash_map::Entry;
 use syntex_syntax::ast;
-use syntex_syntax::ext::quote::rt::Span;
 use syntex_syntax::parse;
-use syntex_syntax::print::pprust::expr_to_string;
 use syntex_syntax::print::pprust::path_to_string;
 use syntex_syntax::print::pprust::ty_to_string;
 use syntex_syntax::visit;
