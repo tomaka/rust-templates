@@ -9,7 +9,7 @@ fn main() {
     struct Template;
 
     let out = Template::build(TemplateMain {
-        test: "hello",
+        test: "hello <script>xss attempt here</script>",
         num: 2,
     });
 

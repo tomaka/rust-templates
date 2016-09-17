@@ -46,7 +46,7 @@ impl {prefix} {{
     pub fn build<{template_params_reqs}>(input: {prefix}Main<{template_params}>) -> String {{
         let mut out = String::new();
         fn to_string<S: ::std::fmt::Display>(s: S) -> String {{ s.to_string() }}
-        fn escape(s: String) -> String {{ s }}       /* FIXME: escape the string */
+        fn escape(s: String) -> String {{ s.replace("<", "&lt;").replace(">", "gt;").replace("\"", "&quot;") }}       /* TODO: escape correctly */
         {read_from_input}
         {codegen}
         out
