@@ -1,0 +1,12 @@
+[package]
+name = "rust_template"
+version = "0.1.0"
+authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>"]
+
+[lib]
+name = "rust_template"
+rustc-macro = true
+
+[dependencies]
+regex = "0.1.77"
+syntex_syntax = "0.43.0"
